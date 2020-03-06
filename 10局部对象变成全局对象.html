@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //定义自调用函数
+    (function (win) {
+
+        //定义一个构造函数
+        function Random() {
+
+        }
+
+        //构造函数定义原型方法
+        Random.prototype.getRandom = function (min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        };
+
+        //局部的构造函数 赋值给window
+        win.Random = Random;
+
+    })(window);
+
+    var ram = new window.Random();
+    console.log( ram.getRandom(100,900));
+
+</script>
+
+</body>
+</html>

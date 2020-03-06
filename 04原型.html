@@ -12,11 +12,11 @@
         this.age = age;
     }
 
-    Person.prototype.eat  = function () {
-      console.log("吃点东西");
+    Person.prototype.eat = function () {
+        console.log("吃点东西");
     };
 
-    var per = new Person("李四",22);
+    var per = new Person("李四", 22);
 
     console.dir(per.__proto__ == Person.prototype);
 
@@ -25,8 +25,8 @@
 
     构造函数中有 prototype 这个属性，叫原型，也是一个对象，这个属性是给程序员使用，是标准的属性-->可以叫原型对象
 
+    原型对象的作用：对象共享数据，节省内存空间
      */
-
 
 
 </script>
