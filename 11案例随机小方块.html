@@ -31,6 +31,7 @@
         Random.prototype.getRandom = function (min, max) {
             return Math.floor(Math.random() * (max - min) + min);
         };
+        //直接返回对象
         win.Random = new Random();
     })(window);
 
