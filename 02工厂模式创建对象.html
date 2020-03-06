@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function createPerson(name, age) {
+        var obj = new Object();
+        obj.name = name;
+        obj.age  = age;
+        obj.eat = function () {
+        };
+        return obj;
+    }
+    var person = createPerson("李四",12);
+    console.log(person.name);
+
+
+    function Person(name, age) {
+        this.name = name;
+        this.age =age;
+        this.eat = function () {
+
+        }
+    }
+
+    var p2 = new Person("试试",11);
+
+
+
+</script>
+
+
+</body>
+</html>

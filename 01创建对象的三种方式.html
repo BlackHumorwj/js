@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    //创建对象的方式
+    //方式1：字面量的方式
+    var per1 = {
+        name:"李思冠",
+        age:12,
+        eat:function () {
+            console.log("吃豆腐");
+        }
+    };
+
+    //方式2：调用系统的构造函数
+    var per2 = new Object();
+    per2.name = "李四";
+    per2.age = 12;
+    per2.eat  = function () {
+      console.log("吃点东西");
+    };
+
+    //方式3：自定构造函数方式
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.eat = function () {
+            console.log("吃吃");
+        }
+    }
+
+</script>
+
+
+
+</body>
+</html>

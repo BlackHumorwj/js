@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    Person.prototype.eat  = function () {
+      console.log("吃点东西");
+    };
+
+    var per = new Person("李四",22);
+
+    console.dir(per.__proto__ == Person.prototype);
+
+    /*
+    实例对象中有 __proto__ 这个属性，叫原型，也是一个对象，这个属性是给浏览器使用的，不是标准的属性-->可以叫原型对象
+
+    构造函数中有 prototype 这个属性，叫原型，也是一个对象，这个属性是给程序员使用，是标准的属性-->可以叫原型对象
+
+     */
+
+
+
+</script>
+</body>
+</html>
