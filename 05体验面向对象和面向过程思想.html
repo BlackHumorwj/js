@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="体验一把" id="btn">
+
+<div id="dv"></div>
+
+
+<script src="common.js"></script>
+<script>
+
+    function ChangeStyle(btnObj, dv, json) {
+        this.btnObj = btnObj;
+        this.dv = dv;
+        this.json = json;
+    }
+
+    ChangeStyle.prototype.init = function () {
+        var that = this;
+        that.btnObj.onclick = function () {
+            //遍历json数据
+            for (var key in that.json) {
+                //通过json数据动态修改样式
+                that.dv.style[key] = that.json[key];
+            }
+        };
+
+    };
+
+
+    var json = {"backgroundColor": "red", "height": "300px", "width": "200px","opacity":"0.36"};
+    //var json = {"width": "500px", "height": "800px", "backgroundColor": "blue", "opacity": "0.2"};
+    var change = new ChangeStyle($my("btn"), $my("dv"), json);
+
+    change.init();
+
+
+</script>
+
+
+</body>
+</html>
