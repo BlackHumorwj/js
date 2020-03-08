@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+
+    }
+
+    Person.prototype.sayHi = function () {
+        console.log("说hi");
+    };
+
+    var person = new Person("熊猫",120);
+
+    //重点：对象的原型__proto__ 指向构造方法中的原型对象prototype，而prototype的构造器
+    //指向构造函数。原型对象与构造函数没有直接的关系
+    console.log(person.__proto__==Person.prototype);
+
+
+
+
+
+</script>
+
+</body>
+</html>

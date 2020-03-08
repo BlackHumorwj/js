@@ -16,6 +16,10 @@
 
     //简单写法
     Person.prototype = {
+
+        //注意 ： 简单的原型写法，缺少构造器
+        constructor:Person,
+
         sex: "male",
         eat: function () {
 
