@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    //函数声明
+    /*
+   1、函数声明会函数提升，在预解析阶段就已创建，声明前后都可以调用
+     */
+    function f1() {
+
+
+    }
+
+
+    //函数表达式
+    var ff = function () {
+
+    };
+
+
+    if (true) {
+        function f12() {
+            console.log("1");
+        }
+    } else {
+        function f12() {
+            console.log("2");
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

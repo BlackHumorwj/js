@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<div>
+
+    <p id="p1">p1</p>
+    <p class="p2">p2</p>
+    <p>p3</p>
+    <p>p4</p>
+
+</div>
+<script src="jquery-1.12.1.js"></script>
+
+<script>
+
+    //文档就绪函数
+    $(document).ready(function () {
+        $("p").click(function () {
+            $(this).hide();
+        });
+    });
+    /*
+    jQuery 语法
+
+    $(this).hide();//隐藏当前的html元素
+    $("#test").hide();//隐藏id ="test"的元素
+    $("p").hide();//隐藏所有<p>元素
+    $(".test").hide();//隐藏所有class="test"的元素
+
+     */
+
+</script>
+
+
+<!--元素选择器-->
+<script>
+
+    //    $("p").hide();
+
+    $("div.p2").hide();
+    $("div#p1").hide();
+
+
+</script>
+
+<!--属性选择器-->
+<script>
+
+    $("[href]");//选取所有带有href属性的元素；
+    $("[href='#']");//href 属性等于 # 的元素；
+    $("[href!='#']");//选取所有带有href 值不等于"#"的元素；
+    $("[href$='.jpg']");//选取所有href值以".jpg"结尾的元素
+
+</script>
+
+
+<!--css选择器-->
+<script>
+
+    $("p").css("background-color","red");
+
+</script>
+
+</body>
+</html>

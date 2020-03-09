@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            left: 50%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<button class="btn"> 隐藏</button>
+<button id="btnShow"> 显示</button>
+<div>
+
+
+</div>
+
+<p>
+    丁阿基对对对阿诗丹顿
+
+</p>
+<p>
+    <span>丁阿基对对对阿诗丹顿</span>
+
+</p>
+
+<h3>标题</h3>
+<script src="jquery-1.12.1.js"></script>
+
+<!--1、显示隐藏 hide show -->
+<!--<script>
+
+    //显示隐藏  语法: $(selector).hide(speed,callback)
+    $(".btn").click(function () {
+        $("p").hide(2000,function () {
+            console.log(arguments.length);
+        });
+    });
+    $("#btnShow").click(function () {
+        $("p").toggle("slow");//fast
+    });
+
+</script>-->
+
+
+<!--2、淡入淡出 fadeIn fadeOut fadeTo-->
+<!--<script>
+    $(".btn").click(function () {
+        $("p").fadeOut(function () {
+        });
+    });
+
+    $("#btnShow").click(  () {
+        $("p").fadeIn();
+        $("h3").fadeTo("slow",0.4);
+
+    });
+</script>-->
+
+<!--3 滑动 slideDown() slideUp() slideToggle()-->
+<!--<script>
+    $(".btn").click(function () {
+        $("p").slideToggle(function () {
+        });
+    });
+</script>-->
+
+
+<!--4 动画 animate() 方法-->
+<!--<script>
+    $(".btn").click(function () {
+
+        $("div").animate({left: '60px', opacity: 0.5});
+        $("div").animate({height: '300px',width:'200px', opacity: 0.5});//队列功能
+        $("div").animate({height: '+=300px',width:'+=200px', opacity: 0.5});
+        $("div").animate({height: '-=300px',width:'-=200px', opacity: 0.5});//使用相对值
+        $("div").animate({height: '-=300px',width:'-=200px', opacity: 0.5});
+    });
+
+</script>-->
+
+<!--5 停止效果stop()-->
+<!--6 jQuery 链式调用-->
+
+<script>
+    $(".btn").click(function () {
+        $("p").css("background-color", "blue", "opacity", "0.5")
+            .slideDown(2000)
+            .slideUp(1000);
+    });
+
+
+</script>
+
+</body>
+</html>
